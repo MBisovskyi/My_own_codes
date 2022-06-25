@@ -28,4 +28,5 @@ def two_lists_make_in_one(list1, list2):
     list_two.clear()
     return list_one
 
+print("Testing MacOS GitHub")
 print(two_lists_make_in_one(list_one, list_two))
