@@ -30,7 +30,7 @@ def happy_number():
         sum_of_numbers += number
     if sum_of_numbers == 1:
         print(f"{input_number} is happy number!")
-    i = 0
+    peak_number = 0
     while sum_of_numbers != 1:
         string_number = str(sum_of_numbers)
         sum_of_numbers = 0
@@ -39,11 +39,12 @@ def happy_number():
             sum_of_numbers += number**2
         if sum_of_numbers == 1:
             print(f"{input_number} is a happy number!")
-        elif sum_of_numbers != 1 or i < 10:
-            i += 1
-        else:
-            print(f"{input_number} is sad")
+        elif sum_of_numbers > peak_number:
+            peak_number = sum_of_numbers
+        elif sum_of_numbers == peak_number:
+            print(f"Number {input_number} is sad!")
             break
+
 
 happy_number()
 
