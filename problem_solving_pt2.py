@@ -70,7 +70,6 @@ def fibonacci():
             number_to_add = int(list_numbers[i]) + int(list_numbers[i + 1])
             list_numbers.append(number_to_add)
             i += 1
-        print(str(list_numbers))
     if input_number1 != 1:
         input_number2 = int(input("Enter second number: "))
         list_numbers.append(input_number1)
@@ -81,6 +80,9 @@ def fibonacci():
             number_to_add = int(list_numbers[i]) + int(list_numbers[i + 1])
             list_numbers.append(number_to_add)
             i += 1
-        print(str(list_numbers))
+    fibonacci = ""
+    convert_to_string = [str(item) for item in list_numbers]
+    fibonacci += " ".join(convert_to_string)
+    print(fibonacci)
 
 fibonacci()
