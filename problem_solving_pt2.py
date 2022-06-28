@@ -35,23 +35,52 @@ import math
 #       c. The first 25 prime numbers (all the prime numbers less than 100) are:
 #           2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97
 
-def prime_numbers():
-    numbers = range(1, 101)
-    i = 1
-    for number in numbers:
-        if number < 3:
-            print(number)
-        elif number % 2 == 0:
-            is_prime = False
-        elif number % (i) == 0 and number % 3 != 0 and number % 4 != 0 and number % 5 != 0 and number % 6 != 0 and number % 7 != 0 and number % 8 != 0 and number % 9 != 0:
-            print(number)
-        elif number < 9:
-            print(number)
-        i += 1
+# def prime_numbers():
+#     numbers = range(1, 101)
+#     i = 1
+#     for number in numbers:
+#         if number < 3:
+#             print(number)
+#         elif number % 2 == 0:
+#             is_prime = False
+#         elif number % (i) == 0 and number % 3 != 0 and number % 4 != 0 and number % 5 != 0 and number % 6 != 0 and number % 7 != 0 and number % 8 != 0 and number % 9 != 0:
+#             print(number)
+#         elif number < 9:
+#             print(number)
+#         i += 1
+
+# prime_numbers()
 
 
-prime_numbers()
 # 3. Fibonacci
 #       a. A series of numbers in which each number (Fibonacci number) is the sum of the two preceding numbers. The simplest is the series 1, 1, 2, 3, 5, 8, etc.
 #       b. Write a method that does the Fibonacci sequence starting at 1
 #       c. HARDER VERSION: Write a method that does the Fibonacci sequence starting at a number that a user inputs
+
+def fibonacci():
+    input_number1 = int(input("Enter number: "))
+    list_numbers = []
+
+    if input_number1 == 1:
+        list_numbers.append(input_number1)
+        list_numbers.append(input_number1)
+        number_to_add = 0
+        i = 0
+        while i < 15:
+            number_to_add = int(list_numbers[i]) + int(list_numbers[i + 1])
+            list_numbers.append(number_to_add)
+            i += 1
+        print(str(list_numbers))
+    if input_number1 != 1:
+        input_number2 = int(input("Enter second number: "))
+        list_numbers.append(input_number1)
+        list_numbers.append(input_number2)
+        number_to_add = 0
+        i = 0
+        while i < 15:
+            number_to_add = int(list_numbers[i]) + int(list_numbers[i + 1])
+            list_numbers.append(number_to_add)
+            i += 1
+        print(str(list_numbers))
+
+fibonacci()
