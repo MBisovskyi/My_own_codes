@@ -38,17 +38,16 @@
 #           ii. {17, 15, 20, 19, 21, 16, 18} → true
 
 def is_incrementing_integers(list_of_integers):
-    sorted_list = sorted(list_of_integers)
     index = 0
-    for number in sorted_list:
-        if number + 1 in sorted_list[index]:
-            result = True
+    while index != len(list_of_integers) - 1:
+        if list_of_integers[index] in list_of_integers and list_of_integers[index] + 1 in list_of_integers or list_of_integers[index] == max(list_of_integers):
             index += 1
-        else:
-            result = False
-            break
-    return result
-list_of_integers = [1, 5, 3, 6, 7, 4, 8, 23]
+            if index == len(list_of_integers) - 1:
+                return True
+        else: 
+            return False
+            
+list_of_integers = [23, 20, 25, 21, 22, 27, 26, 29]
 result = is_incrementing_integers(list_of_integers)
 print(result)
 
